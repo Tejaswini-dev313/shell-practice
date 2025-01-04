@@ -1,6 +1,5 @@
 #!/bin/bash
 
-DATE=$(date +%F)
+DATE=$(date +%c)
 
-echo "Today's date: $DATE"
-
+echo "Today date: $DATE"
