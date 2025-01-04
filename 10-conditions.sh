@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER1=$1
+NUMBER1=$50
 
 if [ $NUMBER -gt 20 ]  #gt, lt, eq, -ne
 then
