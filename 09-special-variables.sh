@@ -10,8 +10,6 @@ echo "what is the current script name: $0"
 
 echo "What is current shellscript processing id: $$"
 
-echo "what is PID of last background command: $!"
-
 sleep 28393
 
 echo "what is PID of last background command: $!"
