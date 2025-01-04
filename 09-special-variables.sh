@@ -9,3 +9,5 @@ echo "what is the current working directory: $PWD"
 echo "what is the current script name: $0"
 
 echo "What is current shellscript processing id: $$"
+
+echo "what is PID of last background command: $!"
