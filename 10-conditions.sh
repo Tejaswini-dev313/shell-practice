@@ -10,11 +10,10 @@ else
 fi
 
 
-TODAY=$SUNDAY
+TODAY="SUNDAY"  # Assigning the value SUNDAY to the variable TODAY
 
-if [$TODAY eq SUNDAY]
-then
-    echo "attend the class $TODAY  "
+if [ "$TODAY" = "SUNDAY" ]; then
+    echo "attend the class $TODAY"
 else
-    echo "dont attend the class $TODAY"
+    echo "don't attend the class $TODAY"
 fi
