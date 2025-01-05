@@ -1,10 +1,20 @@
 #!/bin/bash
 
-NUMBER1=$1  # Corrected: Removed the $ from the assignment
+NUMBER1=$1 
 
 if [ $NUMBER1 -gt 20 ]  # gt, lt, eq, -ne
 then
     echo "Given number: $NUMBER1 is greater than 20"
 else
     echo "Given number: $NUMBER1 is less than 20"
+fi
+
+
+TODAY=$SUNDAY
+
+if [$TODAY -ne sunday]
+then
+    echo "attend the class"
+else
+    echo "dont attend the class"
 fi
