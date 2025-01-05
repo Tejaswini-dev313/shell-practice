@@ -12,7 +12,7 @@ fi
 
 TODAY=$SUNDAY
 
-if [$TODAY -ne sunday]
+if [$TODAY eq sunday]
 then
     echo "attend the class"
 else
