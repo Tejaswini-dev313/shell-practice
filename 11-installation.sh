@@ -1,3 +1,5 @@
 #!/bin/bash
 
-dnf install git -y
+USERID=$(id -U)
+
+echo "User ID is: $USERID"
