@@ -11,12 +11,30 @@ USERID=$(id -u)
 # fi
 
 
+# dnf list installed git
+
+# if [ $? -ne 0 ]
+# then 
+#     echo "Git installation is not success and check it"
+#     dnf install git -y
+# else
+#     echo "Git is already installed"
+# fi
+
 dnf list installed git
 
 if [ $? -ne 0 ]
 then 
     echo "Git installation is not success and check it"
     dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo "Git installation is not success and check it"
+        exit 1
+    else
+        echo "Git installation is success"
+    fi
 else
     echo "Git is already installed"
 fi
+
