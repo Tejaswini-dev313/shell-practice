@@ -9,10 +9,15 @@
 # echo "$PERSON1:: I am doing good, what are you doing?"
 # echo "${PERSON2}:: I am learing shell script $PERSON1"
 
-FRUIT=("APPLE" "KIWI" "ORANGE")
+# FRUIT=("APPLE" "KIWI" "ORANGE")
 
-echo "first fruit is: ${FRUIT[0]}"
-echo "Second fruit is: ${FRUIT[1]}"
-echo "third fruit is: ${FRUIT[2]}"
+# echo "first fruit is: ${FRUIT[0]}"
+# echo "Second fruit is: ${FRUIT[1]}"
+# echo "third fruit is: ${FRUIT[2]}"
 
-echo "Total fruits are: ${FRUIT[@]}"
+# echo "Total fruits are: ${FRUIT[@]}"
+
+
+DATE=$(date +%c)
+
+echo "today date is: $DATE"
