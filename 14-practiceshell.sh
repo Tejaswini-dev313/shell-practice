@@ -19,7 +19,6 @@
 NUMBER=$1
 
 if [ $NUMBER -gt 30 ]
-
 then
     echo "Given number: $NUMBER is greater then 30"
 else
