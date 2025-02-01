@@ -65,7 +65,15 @@
 
 USERID=$(id -u)
 
-VALIDATE (){
+CHECK_ROOT(){
+    if [ $USERID -ne 0 ]
+then
+    echo "Please run the script root priveleges"
+    exit 1
+fi
+}
+
+VALIDATE(){
     if [ $1 -ne 0 ]
     then 
         echo "$2 is...FAILED"
@@ -75,11 +83,7 @@ VALIDATE (){
     fi
 }
 
-if [ $USERID -ne 0 ]
-then
-    echo "Please run the script root priveleges"
-    exit 1
-fi
+CHECK_ROOT
 
 dnf list installed mysql
 
