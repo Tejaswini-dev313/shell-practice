@@ -25,6 +25,7 @@
 #     echo "Given number: $NUMBER is less than 30"
 # fi
 
+
 USERID=$(id -u)
 
 echo "User ID is: $USERID"
@@ -35,7 +36,22 @@ then
     exit 1
 fi
 
-dnf install mysql -y
+dnf list installed mysql -y
+
+if [ $? -ne 0 ]
+then
+    echo "mysql is not installed and going to install it"
+    dnf install mysql -y
+    if [ $? -ne 0 ]
+    then
+        echo "mysql installation is not success and check it"
+        exit 1
+    else
+        echo "mysql is installed successfully"
+    fi
+else
+    echo "mysql already installed"
+fi
 
 
 
