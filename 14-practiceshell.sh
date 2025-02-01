@@ -83,9 +83,32 @@ fi
 
 dnf list installed mysql
 
-VALIEDATE $? "Listing Git"
+VALIEDATE $? "Listing mysql"
 
+# if [ $? -ne 0 ]
+# then
+#     echo "mysql is not installed and going to install it"
+#     dnf install mysql -y
+#     if [ $? -ne 0 ]
+#     then
+#         echo "mysql installation is not success and check it"
+#         exit 1
+#     else
+#         echo "mysql is installed successfully"
+#     fi
+# else
+#     echo "mysql already installed"
+# fi
 
+# dnf list installed git -y
+
+# if [ $? -ne 0 ]
+# then
+#     echo "Git is not installed and going to install it"
+#     dnf install git -y
+# else
+#     echo "Git is already installed"
+# fi
 
 
 
