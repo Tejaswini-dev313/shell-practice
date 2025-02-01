@@ -16,12 +16,20 @@
 # echo "PID of last background command: $!"
 
 
-NUMBER=$1
+# NUMBER=$1
 
-if [ $NUMBER -gt 30 ]
-then
-    echo "Given number: $NUMBER is greater then 30"
-else
-    echo "Given number: $NUMBER is less than 30"
-fi
+# if [ $NUMBER -gt 30 ]
+# then
+#     echo "Given number: $NUMBER is greater then 30"
+# else
+#     echo "Given number: $NUMBER is less than 30"
+# fi
+
+USERID=$(id -u)
+
+
+
+
+
+
 
