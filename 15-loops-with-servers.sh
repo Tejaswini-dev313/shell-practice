@@ -28,7 +28,15 @@ CHECK_ROOT
 # git mysql postfix and nginx server will install automatically.
 for package in $@ # $@ refers to all arguments passed to it
 do
-    echo $package
+    dnf list installed $package
+    if [ $? -ne 0 ]
+    then
+        echo "$package is not installed, going to install it"
+        dnf install $package -y
+        VALIDATE $? "installing $package"
+    else
+        echo "$package is already installed."
+    fi
 done
 
 
