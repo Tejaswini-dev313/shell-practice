@@ -63,53 +63,53 @@
 #     echo "Git is already installed"
 # fi
 
-USERID=$(id -u)
-R="\e[31m"
-G="\e[32m"
-N="\e[0m"
+# USERID=$(id -u)
+# R="\e[31m"
+# G="\e[32m"
+# N="\e[0m"
 
-CHECK_ROOT(){
-    if [ $USERID -ne 0 ]
-then
-    echo "Please run the script root priveleges"
-    exit 1
-fi
-}
+# CHECK_ROOT(){
+#     if [ $USERID -ne 0 ]
+# then
+#     echo "Please run the script root priveleges"
+#     exit 1
+# fi
+# }
 
-VALIDATE(){
-    if [ $1 -ne 0 ]
-    then 
-        echo -e "$2 is...$R FAILED $N"
-        exit 1
-    else
-        echo -e "$2 is...$G SUCCESS $N"
-    fi
-}
+# VALIDATE(){
+#     if [ $1 -ne 0 ]
+#     then 
+#         echo -e "$2 is...$R FAILED $N"
+#         exit 1
+#     else
+#         echo -e "$2 is...$G SUCCESS $N"
+#     fi
+# }
 
-CHECK_ROOT
+# CHECK_ROOT
 
-dnf list installed mysql
+# dnf list installed mysql
 
 
-if [ $? -ne 0 ]
-then
-    echo "mysql is not installed and going to install it"
-    dnf install mysql -y
-    VALIDATE $? "Installing mysql"
-else
-    echo "mysql already installed"
-fi
+# if [ $? -ne 0 ]
+# then
+#     echo "mysql is not installed and going to install it"
+#     dnf install mysql -y
+#     VALIDATE $? "Installing mysql"
+# else
+#     echo "mysql already installed"
+# fi
 
-dnf list installed git -y
+# dnf list installed git -y
 
-if [ $? -ne 0 ]
-then
-    echo "Git is not installed and going to install it"
-    dnf install git -y
-    VALIDATE $? "Installing Git"
-else
-    echo "Git is already installed"
-fi
+# if [ $? -ne 0 ]
+# then
+#     echo "Git is not installed and going to install it"
+#     dnf install git -y
+#     VALIDATE $? "Installing Git"
+# else
+#     echo "Git is already installed"
+# fi
 
 
 

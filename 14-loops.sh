@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {0..99999} 
+for i in {0.....20}
 do
     echo $i
 done
