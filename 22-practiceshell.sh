@@ -1,14 +1,14 @@
 #!/bin/bash
 
-echo "Please enter your username::"
+FRUITS=("APPLE" "KIWI" "ORANGE")
 
-read -s USERNAME
+echo "First fruit name is: ${FRUITS[0]}"
+echo "second fruit name is: ${FRUITS[1]}"
+echo "Third fruit name is: ${FRUITS[2]}"
+
+echo "Total fruit name is: ${FRUITS[@]}"
 
 
-
-echo "Please enter password:"
-
-read -s PASSWORD
 
 
 
