@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATE=$(date +%A)
+DATE=$(ls -la)
 
 echo "Today date is $DATE"
 
