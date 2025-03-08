@@ -1,8 +1,12 @@
 #!/bin/bash
 
-echo "Teju: Hii, How are you chinna"
-echo "chinna: Hello im fine Teju"
-echo "Teju: What are you doing"
-echo "chinna: nothing Teju, watching TV"
+
+Person1=Teju
+Person2=chinna
+
+echo "$Person1: Hii, How are you $Person2"
+echo "$Person2: Hello im fine $Person1"
+echo "$Person1: What are you doing"
+echo "$Person2: nothing $Person1, watching TV"
 
 
