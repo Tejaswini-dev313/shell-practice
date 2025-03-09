@@ -48,13 +48,13 @@
 # fi
 
 for Package in $@
-
-dnf list installed $Package
-
-if [ $? -ne 0 ]
-then
-    echo "$Package is not installed..going to install it"
-    dnf install $Package -y
-else
-    echo "insatlled $Package"
+do
+    dnf list installed $Package
+    if [ $? -ne 0 ]
+    then
+        echo "$Package is not installed..going to install it"
+        dnf install $Package -y
+    else
+        echo "insatlled $Package"
 fi
+done
