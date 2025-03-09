@@ -47,7 +47,7 @@
 #     echo "git installed nothing to do"
 # fi
 
-for Package in $@
+for $Package in $@
 do
     dnf list installed $Package
     if [ $? -ne 0 ]
@@ -55,6 +55,5 @@ do
         echo "$Package is not installed..going to install it"
         dnf install $Package -y
     else
-        echo "insatlled $Package"
+        echo "installed $Package"
 fi
-done
