@@ -8,12 +8,12 @@ then
     exit 1
 fi
 
-dnf install mysql -y
+dnf install mysqlll -y
 
 if [ $? -ne 0 ]
 then
     echo "mysql is not installed and going to install it.."
-    dnf install mysql -y
+    dnf install mysqlll -y
     if [ $? -ne 0 ]
     then
         echo "mysql installation is not successful..check it"
