@@ -8,12 +8,12 @@ then
     exit 1
 fi
 
-dnf install mysqlll -y
+dnf install mysql -y
 
 if [ $? -ne 0 ]
 then
     echo "mysql is not installed and going to install it.."
-    dnf install mysqlll -y
+    dnf install mysql -y
     if [ $? -ne 0 ]
     then
         echo "mysql installation is not successful..check it"
@@ -25,3 +25,20 @@ else
     echo "mysql is installed"
 fi
 
+dnf install git -y
+
+if [ $? -ne 0 ]
+then
+    echo "git is not installed and going to install it"
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo "git is not installed..plese check it"
+        exit 1
+    else
+        echo "git installed"
+    fi
+else
+    echo "git installed nothing to do"
+
+fi
