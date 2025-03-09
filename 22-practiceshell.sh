@@ -1,10 +1,12 @@
 #!/bin/bash
 
-NUMBER1=$1
-NUMBER2=$2
+USERID=$(id -u)
 
-SUM=$(($NUMBER1+$NUMBER2))
-
-echo "Total of $NUMBER1 and $NUMBER2 is: $SUM"
-
+if ( $USERID -ne 0 )
+then
+    echo "Run the script with root previliges"
+    exit 1
+else
+    login successfully
+fi
 
