@@ -42,5 +42,4 @@ then
     VALIDATE $? "Installing git"
 else
     echo "git installed nothing to do"
-
 fi
