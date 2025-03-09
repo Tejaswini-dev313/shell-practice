@@ -47,7 +47,7 @@
 #     echo "git installed nothing to do"
 # fi
 
-for i in {0..150}
-do
+for i in {0..10}
+do 
     echo $i
 done
