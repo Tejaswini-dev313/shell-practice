@@ -1,6 +1,10 @@
 #!/bin/bash
 
-CLEAR=$(clear)
+NUMBER1=$1
+NUMBER2=$2
 
-echo "Cleared the data: $CLEAR"
+SUM=$(($NUMBER1+$NUMBER2))
+
+echo "Total of $NUMBER1 and $NUMBER2 is: $SUM"
+
 
