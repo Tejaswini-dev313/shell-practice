@@ -22,6 +22,6 @@ then
         echo "mysql is installed successful"
     fi
 else
-    echo "mysql is already installed"
+    echo "mysql is installed"
 fi
 
