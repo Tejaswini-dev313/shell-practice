@@ -56,6 +56,5 @@ do
         dnf install $Package -y
     else
         echo "installed $Package"
-fi
-
+    fi
 done
