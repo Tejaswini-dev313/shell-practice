@@ -57,3 +57,5 @@ do
     else
         echo "installed $Package"
 fi
+
+done
