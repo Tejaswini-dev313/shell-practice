@@ -2,11 +2,25 @@
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0 ]
-then
-    echo "Run the script with root previliges"
-    exit 1
-fi
+CHECK_ROOT(){
+    if [ $USERID -ne 0 ]
+    then
+        echo "Run the script with root previliges"
+        exit 1
+    fi
+}
+
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then
+        echo " $1 is...FAILED"
+        exit 1
+    else
+        echo "$2 is...SUCCESS"
+    fi
+}
+
+CHECK_ROOT
 
 dnf installl mysql -y
 
@@ -14,13 +28,7 @@ if [ $? -ne 0 ]
 then
     echo "mysql is not installed and going to install it.."
     dnf install mysqlll -y
-    if [ $? -ne 0 ]
-    then
-        echo "mysql installation is not successful..check it"
-        exit 1
-    else
-        echo "mysql is installed successful"
-    fi
+    VALIDATE $? "installing mysql"
 else
     echo "mysql is installed"
 fi
@@ -31,13 +39,7 @@ if [ $? -ne 0 ]
 then
     echo "git is not installed and going to install it"
     dnf install git -y
-    if [ $? -ne 0 ]
-    then
-        echo "git is not installed..plese check it"
-        exit 1
-    else
-        echo "git installed"
-    fi
+    VALIDATE $? "Installing git"
 else
     echo "git installed nothing to do"
 
