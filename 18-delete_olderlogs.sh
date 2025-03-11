@@ -15,3 +15,5 @@ else
     exit 1
 fi
 
+FILE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
+echo "Files: $FILE"
