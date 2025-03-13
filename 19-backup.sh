@@ -45,7 +45,7 @@ then
     #check if zip file is successflly created or not
     if [ -f $ZIP_FILE ]
     then
-        echo "Successfully zipped files older than $DAYS"
+        echo -e "$G Successfully $N zipped files older than $DAYS"
     
         #remove the files after zipping
         while IFS= read -r file
