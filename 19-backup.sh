@@ -47,7 +47,6 @@ then
     if [ -f $ZIP_FILE ]
     then
         echo -e "$G Successfully $N zipped files older than $DAYS"
-    
         #remove the files after zipping
         while IFS= read -r file
         do
