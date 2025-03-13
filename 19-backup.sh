@@ -56,6 +56,7 @@ then
     else
         echo "zipping the files are failed"
         exit 1
+    fi
 else   
     echo "No files older than $DAYS"
 fi
