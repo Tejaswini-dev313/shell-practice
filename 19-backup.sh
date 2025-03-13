@@ -20,6 +20,7 @@ USAGE(){
 if [ $# -lt 2 ]
 then
     USAGE
+    exit 1
 fi
  
 if [ ! -d $SOURCE_DIR ]
@@ -39,7 +40,7 @@ echo "Files: $FILES"
 if [ ! -z $FILES ] #true if FILES are empty, ! makes it expression false
 then
     echo "Files are found"
-    zip_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
+    zip_FILE="$DEST_DIR/backup-$TIMESTAMP.zip"
     find ${SOURCE_DIR} -name "*.log" -mtime +14 | zip "$ZIP_FILE" -@
 
     #check if zip file is successflly created or not
