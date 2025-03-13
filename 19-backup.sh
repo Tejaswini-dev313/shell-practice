@@ -41,6 +41,21 @@ then
     echo "Files are found"
     zip_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     find ${SOURCE_DIR} -name "*.log" -mtime +14 | zip "$ZIP_FILE" -@
+
+    #check if zip file is successflly created or not
+    if [ -f $ZIP_FILE ]
+    then
+        echo "Successfully zipped files older than $DAYS"
+    
+        #remove the files after zipping
+        while IFS= read -r file
+        do
+            echo "Deleting file: $file"
+            rm -rf $file
+        done <<< $FILES
+    else
+        echo "zipping the files are failed"
+        exit 1
 else   
     echo "No files older than $DAYS"
 fi
