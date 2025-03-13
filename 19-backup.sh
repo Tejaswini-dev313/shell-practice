@@ -10,6 +10,7 @@ N="\e[0m"
 Y="\e[33m"
 
 USAGE(){
+
     echo -e "$R USAGE:: $N sh-backup.sh <source> <destination> <days(optional)>"
 }
 
@@ -31,6 +32,15 @@ then
 fi
 
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
+
+echo "Files: $FILES"
+
+if [ -n $FILES ] #true if FILES are empty, ! makes it expression false
+then
+    echo "Files are found"
+else   
+    echo "No files older than $DAYS"
+fi
 
 
 
