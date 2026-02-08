@@ -4,7 +4,7 @@ LOGS_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
-mkdir -p $LOGS_FOLDER
+mkdir -p $LOGS_FOLDER  # -p will show if folder already created or not
 
 USERID=$(id -u)
 R="\e[31m"
@@ -14,7 +14,7 @@ N="\e[0m"
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
 then
-    echo "Please run the script root priveleges" | tee -a $LOG_FILE
+    echo "Please run the script root priveleges" | tee -a $LOG_FILE # tee -a will show results on terminal and append to log file
     exit 1
 fi
 }
